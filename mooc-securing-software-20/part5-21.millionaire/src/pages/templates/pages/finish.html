@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Who wants to be a millionaire?</title>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    </head>
+    <body>
+
+        <h1>Awesome! You beat the game!</h1>
+
+        <p>Enter your credentials to enter a lottery for the winners!</p>
+
+        <form action="/thanks/" method="POST">
+			{% csrf_token %}
+            <p>Name: <input type="text" name="name"/></p>
+            <p>Email: <input type="text" name="email"/></p>
+            <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+        </form>
+
+        <img src="/static/img/cat-hacker.jpg" width="25%"></img>
+        <p></p>
+    </body>
+</html>

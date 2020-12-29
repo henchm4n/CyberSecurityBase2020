@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Who wants to be a millionaire?</title>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    </head>
+    <body>
+
+
+        <h1>Current topics</h1>
+
+        <ul>
+		{% for q in questions %}
+			<li><a href="/topic/{{q.id}}">{{q.name}}</a></li>
+		{% endfor %}
+        </ul>
+
+    </body>
+</html>

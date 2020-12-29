@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Who wants to be a millionaire?</title>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    </head>
+    <body>
+
+        <p>{{question.question}}</p>
+
+        <p>Your answer:</p>
+
+        <ol type="A">
+			{% for a in question.answers %}
+			<li>
+			<a href = '/quiz/{{topic.id}}/{{forloop.counter0}}/'>{{a}}</a>
+			{% endfor %}
+        </ol>
+
+    </body>
+</html>

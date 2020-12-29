@@ -1,0 +1,1 @@
+[{"name": "test.test_tasks.TaskTest.test_modified", "status": "passed", "message": "", "passed": true, "points": ["2.1.1", "2.1.2", "2.1.3", "2.1.4", "2.1.5"], "backtrace": []}, {"name": "test.test_tasks.TaskTest.test_original", "status": "passed", "message": "", "passed": true, "points": ["2.1.1", "2.1.2", "2.1.3", "2.1.4", "2.1.5"], "backtrace": []}]

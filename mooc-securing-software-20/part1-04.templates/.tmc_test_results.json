@@ -1,0 +1,1 @@
+[{"name": "test.test_template.TemplateTest.test_home", "status": "passed", "message": "", "passed": true, "points": ["1.4.1", "1.4.2", "1.4.3", "1.4.4", "1.4.5"], "backtrace": []}, {"name": "test.test_template.TemplateTest.test_video", "status": "passed", "message": "", "passed": true, "points": ["1.4.1", "1.4.2", "1.4.3", "1.4.4", "1.4.5"], "backtrace": []}]

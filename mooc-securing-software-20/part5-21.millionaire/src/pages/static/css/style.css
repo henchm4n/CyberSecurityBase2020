@@ -1,0 +1,27 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    padding-left: 2em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: -0.5em;
+}
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}

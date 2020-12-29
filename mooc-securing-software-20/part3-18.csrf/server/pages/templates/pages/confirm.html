@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bank Transfer</title>
+    </head>
+
+
+    <body>
+		<h2>Confirm transaction</h1>
+
+        <table>
+		<tr>
+		<th style="text-align:left">From: <td>{{user.username}} 
+		<tr>
+		<th style="text-align:left">To:  <td>{{request.session.to}}
+		<tr>
+		<th style="text-align:left">Amount:  <td>{{request.session.amount}}
+		</table>
+
+		<br/>
+		Are you sure?
+        <form action='/confirm/' method="GET">
+            <input type="submit" value="Yes"/>
+        </form>
+        <form action='/' method="GET">
+            <input type="submit" value="No"/>
+        </form>
+    </body>
+
+
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Hihaupload</title>
+    </head>
+
+
+    <body>
+		<h1>Hihaupload</h1>
+
+        <table>
+		<tr>
+		<th style="text-align:left">Username: <td>{{user.username}} 
+		</table>
+
+
+        <form action='logout/' method="POST">
+			{% csrf_token %}
+            <input type="submit" value="Logout"/>
+        </form>
+		
+        <h2>Your files</h2>
+
+        <table>
+		{% for file in uploads %}
+		<tr>
+		<td>
+		{{file.name}}
+		<td>
+		<a href="download/{{file.id}}">Download</a>
+		<td>
+        <form action='delete/' method="POST">
+			{% csrf_token %}
+            <input type="hidden" name="id" value="{{file.id}}" />
+            <input type="submit" value="Delete"/>
+        </form>
+
+		{% endfor %}
+		</table>
+
+        <h2>Add file</h2>
+
+        <form action='add/' method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<input type="file" name="file" id="file"/>
+            <input type="submit" value="Add"/>
+        </form>
+    </body>
+
+
+    </body>
+</html>
